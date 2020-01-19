@@ -1,0 +1,23 @@
+{
+    "name": "YouTube Downloader",
+    "description": "Download the videos from the YouTube directly.",
+    "version": "0.1",
+    "author": "Md Irfan Khan",
+    "manifest_version": 2,
+    "web_accessible_resources": ["src/youtubel.js"],
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/watch*"],
+            "js": ["src/loader.js"],
+            "css": ["src/drop.css"]
+        }
+    ],
+    "permissions": [
+        "downloads"
+    ],
+
+    "background": {
+        "scripts": ["src/background.js"]
+    }
+
+}
